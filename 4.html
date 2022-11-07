@@ -7,21 +7,30 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="d1"></p>
-    <p id="d2"></p>
-    <p id="d3"></p>
-    <p id="d4"></p>
-    <p id="d5"></p>
+     <p id="1"></p>
+    <p id="2"></p>
+    <p id="3"></p>
+    <p id="4"></p>
+    <p id="5"></p>
     <script>
-        var cabinetHold1=['duct tape','gum',3.14,false,6.0233e23];
-        var cabinetHold12=['orange drink','nref toys','camera',42,'parnsip'];
-        document.getElementById('d1').innerHTML='after concat:['+cabinetHold1.concat(cabinetHold12)+']';
-        document.getElementById('d2').innerHTML='slice operation on array 1: ['+cabinetHold1.splice(3)+']';
-        document.getElementById('d3').innerHTML='slice operation on array 2: ['+cabinetHold12.splice(3)+']';
-        document.getElementById('d4').innerHTML='reverse of array 1 is: ['+cabinetHold1.reverse()+']';
-        document.getElementById('d5').innerHTML='sort of array 2 is: ['+cabinetHold12.sort()+']';
-        
+       
+       let holdCabinet1 = ['duct tape', 'gum', 3.14, false, 6.022e23]
+       let holdCabinet2 = ['orange drink', 'nerf toys', 'camera', 42, 'parsnip']
 
+       let concaty=holdCabinet1.concat(holdCabinet2)
+       document.getElementById("1").innerHTML="["+concaty+"]"
+
+       let slice1=holdCabinet1.slice(1,3)
+       let slice2=holdCabinet2.slice(1,3)
+       document.getElementById("2").innerHTML="["+slice1+"]"
+       document.getElementById("3").innerHTML="["+slice2+"]"
+
+       let reverse1=holdCabinet1.reverse()
+       document.getElementById("4").innerHTML="["+reverse1+"]"
+
+       let sort2=holdCabinet2.sort()
+       document.getElementById("5").innerHTML="["+sort2+"]"
+       
     </script>
 </body>
 </html>
