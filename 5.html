@@ -37,9 +37,10 @@
 
         document.getElementById("8").innerHTML=arr.join('a')
 
-        let arr1 = ['water','space suits','food','plasma sword','batteries']
-        let str1=document.getElementById("9").innerHTML=arr1.join('')
-        document.getElementById("10").innerHTML="["+str1.split('')+"]"
+        let str2 = "water,space suits,food,plasma sword,batteries"
+        let arr2=str2.split('')
+        document.getElementById("9").innerHTML="["+str2.split('')+"]"
+        document.getElementById("10").innerHTML=arr2.join('')
 
     </script>
 </body>
