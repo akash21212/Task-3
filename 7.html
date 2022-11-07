@@ -7,55 +7,44 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="d1"></p>
-    <p id="d2"></p>
-    <p id="d3"></p>
-    <p id="d4"></p>
-    <p id="d5"></p>
-    <p id="d6"></p>
-    <p id="d7"></p>
-    <p id="d8"></p>
-    <p id="d9"></p>
-    <p id="d10"></p>
-    <p id="d11"></p>
-    
+    <p id="1"></p>
+    <p id="2"></p>
+    <p id="3"></p>
+    <p id="4"></p>
+    <p id="5"></p>
+    <p id="6"></p>
+    <p id="7"></p>
+    <p id="8"></p>
+    <p id="9"></p>
     <script>
-        let people=["Greg", "Mary", "Devon", "James"];
-        var text="";
-        people.forEach(printElement);
-        console.log("array iteration:");
-        function printElement(value)
-        {
-            text+=value+"<BR>";
-            console.log(value);
+        var people=["Greg", "Mary", "Devon", "James"];
+        for(let i=0;i<people.length;i++){
+           console.log(people[i])
         }
-        document.getElementById("d1").innerHTML = text;
-        people.splice(0,1);
-        document.getElementById("d2").innerHTML = people;
-        people.pop();
-        document.getElementById("d3").innerHTML = people;
-        people.unshift("Matt") 
-        document.getElementById("d4").innerHTML = people;
-        people.push("AKASH")
-        document.getElementById("d5").innerHTML = people;
-        var len=people.length;
-        for(let i=0;i<len;i++)
-        {
-            text+=people[i]+"<BR>";
-            console.log(people[i]);
-            if(people[i]=="Mary")
-              break;
+
+        people.shift()
+        document.getElementById("1").innerHTML="["+people+"]"
+        people.pop()
+        document.getElementById("2").innerHTML="["+people+"]"
+        people.unshift("Matt")
+        document.getElementById("3").innerHTML="["+people+"]"
+        people.push("Akash")
+        document.getElementById("4").innerHTML="["+people+"]"
+
+        for(let i=0;i<people.length;i++){
+            if(people[i]!="Mary")
+            console.log(people[i])
         }
-        document.getElementById("d6").innerHTML = text;
-        arrCopy=people.slice(2);
-        document.getElementById("d7").innerHTML=arrCopy;
-        document.getElementById("d8").innerHTML="Index of Mary : "+people.indexOf("Mary");
-        document.getElementById("d9").innerHTML="Index of Foo  : "+people.indexOf("Foo");
-        people=["Greg", "Mary", "Devon", "James"]; 
-        people.splice(2,1,"Elizabeth","Artie","James");
-        document.getElementById("d10").innerHTML="updated array is:"+people;
-        var withBob=people.concat("Bob");
-        document.getElementById("d11").innerHTML="updated array is:"+withBob;
+
+        document.getElementById("5").innerHTML= "["+people.slice(1,4)+"]"
+        document.getElementById("6").innerHTML= people.indexOf("Mary")
+        document.getElementById("7").innerHTML= people.indexOf("Foo")
+        var people=["Greg", "Mary", "Devon", "James"];
+        let add=people.splice(2,1,"Elizabeth","Artie")
+        document.getElementById("8").innerHTML= "["+people+"]"
+
+        var withBob=people
+        document.getElementById("9").innerHTML="["+withBob.concat("Bob")+"]"
     </script>
 </body>
 </html>
