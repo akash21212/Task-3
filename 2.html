@@ -6,25 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<p id="d1"></p>
-<p id="d2"></p>
-<p id="d3"></p>
-<p id="d4"></p>
-<p id="d5"></p>
+<p id="1"></p>
+<p id="2"></p>
+<p id="3"></p>
+<p id="4"></p>
+<p id="5"></p>
 <body>
     <script>
         let cargoHold=['oxygen tanks','space suits','parrot','instruction manuami','meal packs','slinky','security blanket'];
         cargoHold[5]='space tether';
-        document.getElementById('d1').innerHTML="["+cargoHold+"]"
+        document.getElementById('1').innerHTML="["+cargoHold+"]"
         let remove=cargoHold.pop();
-        document.getElementById('d2').innerHTML=remove
+        document.getElementById('2').innerHTML=remove
         let firstElement=cargoHold.shift()
-        document.getElementById('d3').innerHTML=firstElement
+        document.getElementById('3').innerHTML=firstElement
         cargoHold.unshift(1138)
         cargoHold.push('20 meteres')
-        document.getElementById('d4').innerHTML="["+cargoHold+"]"
-        document.getElementById('d5').innerHTML=cargoHold.length
-        
+        document.getElementById('4').innerHTML="["+cargoHold+"]"
+        document.getElementById('5').innerHTML=cargoHold.length
     </script>
     
 </body>
