@@ -7,26 +7,27 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="d1"></p>
-    <p id="d2"></p>
-    <p id="d3"></p>
-    <p id="d4"></p>
-    <p id="d5"></p>
-    <p id="d6"></p>
+   <p id="1"></p>
+    <p id="2"></p>
+    <p id="3"></p>
+    <p id="4"></p>
+    <p id="5"></p>
+    <p id="6"></p>
     <script>
-        var element1=['hydrogen','H',1.008];
-        var element2=['helium','He',4.003];
-        var element3=['iron','Fe',55.85];
-        var table=[];
-        table.push(element1);
-        table.push(element2);
-        table.push(element3);
-        document.getElementById("d1").innerHTML ="Table structure is : "+ table;
-        document.getElementById("d2").innerHTML ="Table[1] : "+table[1]; 
-        document.getElementById("d3").innerHTML ="Table[1][1] : "+table[1][1]; 
-        document.getElementById("d4").innerHTML =table[0][2]; 
-        document.getElementById("d5").innerHTML =table[1][0]; 
-        document.getElementById("d6").innerHTML =table[2][1]; 
+        let element1 =  ['hydrogen', 'H', 1.008]
+        let element2 = ['helium', 'He', 4.003]
+        let element26 = ['iron', 'Fe', 55.85]
+        let table=[];
+        table.push(element1)
+        table.push(element2)
+        table.push(element26)
+        document.getElementById("1").innerHTML="["+table+"]"
+        document.getElementById("2").innerHTML="["+table[1]+"]"
+        document.getElementById("3").innerHTML="["+table[1][1]+"]"
+        document.getElementById("4").innerHTML="["+table[0][2]+"]"
+        document.getElementById("5").innerHTML="["+table[1][0]+"]"
+        document.getElementById("6").innerHTML="["+table[2][1]+"]"
+
     </script>
 </body>
 </html>
